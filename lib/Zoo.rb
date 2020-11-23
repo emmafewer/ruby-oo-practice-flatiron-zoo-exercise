@@ -8,6 +8,11 @@ class Zoo
         @@all << self
     end
 
+    #See Animal class for other way
+    def add_animal(animal)
+        animal.zoo = self
+    end
+
     def animals
         Animal.all.select{|animal| animal.zoo == self}
     end

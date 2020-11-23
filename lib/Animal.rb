@@ -5,12 +5,16 @@ class Animal
 
     @@all = []
 
-    def initialize(species, weight, nickname, zoo)
+    def initialize(species, weight, nickname)
         @species = species
         @weight = weight
         @nickname = nickname
         @@all << self
-        @zoo = zoo
+        # @zoo = zoo
+        # ^^ I could initiate zoo here and add it as a parameter. 
+        #    That way I wouldn't need the add_animal method in zoo.
+        #    However, then I would always need to write out the zoo when 
+        #    creating a new animal.
     end
 
     def self.find_by_species(species)
